@@ -3145,6 +3145,7 @@
                              , o.createElement("div", { className: "hidden", alt: e.content.title })
                              , o.createElement("div", { className: "hidden", alt: e.content.card_value }))
                         } else {
+                            console.log("제스너 no : "+e.content.gesture);
                             if (!e.content) return null;
                             var r = new i.AdaptiveCardBuilder;
                             return e.content.images && e.content.images.forEach(function (t) {
@@ -7671,27 +7672,30 @@
                 function e(e) {
                     return t.call(this, e) || this
                 }
-                return r.__extends(e, t), e.prototype.sendMessage = function() {
+                return r.__extends(e, t), e.prototype.sendMessage = function () {
                     this.props.inputText.trim().length > 0 && this.props.sendMessage(this.props.inputText)
-                }, e.prototype.onKeyPress = function(t) {
+                }, e.prototype.onKeyPress = function (t) {
                     "Enter" === t.key && this.sendMessage()
-                }, e.prototype.onClickSend = function() {
+                }, e.prototype.onClickSend = function () {
                     this.sendMessage()
-                }, e.prototype.onChangeFile = function() {
+                }, e.prototype.onChangeFile = function () {
                     this.props.sendFiles(this.fileInput.files), this.fileInput.value = null
-                }, e.prototype.onTextInputFocus = function() {
+                }, e.prototype.onTextInputFocus = function () {
                     this.props.listening && this.props.stopListening()
-                }, e.prototype.onClickMic = function() {
+                }, e.prototype.onClickMic = function () {
                     this.props.listening ? this.props.stopListening() : this.props.startListening()
-                }, e.prototype.focus = function(t) {
+                }, e.prototype.focus = function (t) {
                     this.textInput.focus(), t && this.props.onChangeText(this.props.inputText + t)
-                }, e.prototype.render = function() {
+                }, e.prototype.render = function () {
                     var t = this,
                         e = "wc-console";
                     this.props.inputText.length > 0 && (e += " has-text");
                     var n = this.props.listening || a.Speech.SpeechRecognizer.speechIsAvailable() && !this.props.inputText.length,
                         r = i.classList("wc-send", n && "hidden"),
                         s = i.classList("wc-mic", !n && "hidden", this.props.listening && "active", !this.props.listening && "inactive");
+
+                    
+
                     return o.createElement("div", {
                         className: e
                     },
@@ -7731,6 +7735,14 @@
                             return t.props.onChangeText(t.textInput.value)
                         },
                         onKeyPress: function (e) {
+
+                            //KSO (autocomplete)
+                            if (($('.hiddenText').attr('value') != '') && (t.textInput.value !== '')) {
+                                t.props.inputText = t.textInput.value;
+                                t.textInput.value = '';
+                                $('.hiddenText').attr('value', '');
+                            }
+                            //KSO (menu 부분 현재 사용x)
                             if ((t.props.inputText === 'return home') && (t.textInput.value == '')) {
                                 t.props.inputText = '';
                             }
@@ -7740,10 +7752,23 @@
                             return t.onTextInputFocus()
                         },
                         placeholder: this.props.listening ? this.props.strings.listeningIndicator : this.props.strings.consolePlaceholder
-                    })), o.createElement("label", {
+                        })
+                        //KSO (autocomplete hidden 추가)
+                        ,o.createElement("div", {
+                            className: "hiddenText"
+                        })
+                        ), o.createElement("label", {
                         className: r,
                         onClick: function () {
-                            if ((t.props.inputText === ''|| t.props.inputText === 'return home') && (t.textInput.value !== '')) {
+
+                            //KSO (autocomplete)
+                            if (($('.hiddenText').attr('value') != '') && (t.textInput.value !== '')) {
+                                t.props.inputText = t.textInput.value;
+                                t.textInput.value = '';
+                                $('.hiddenText').attr('value', '');
+                            }
+                            //KSO (menu부분 현재 사용x)
+                            if ((t.props.inputText === '' || t.props.inputText === 'return home') && (t.textInput.value !== '')) {
                                 t.props.inputText = t.textInput.value;
                             }
                             return t.onClickSend()

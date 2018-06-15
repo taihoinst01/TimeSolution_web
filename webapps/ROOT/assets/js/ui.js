@@ -3,7 +3,7 @@ $(function () {
     $(window).resize(function () {
         //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     });
-
+    
     //팝업창 생성
     $("#bot > div").add(
         "<div class='mov-wrapper popupArea'>" +
@@ -12,8 +12,24 @@ $(function () {
                 "<button class='btnTopClose'></button>" +
             "</div>" +
             "<div class='popBody'>" +
-                "<iframe id='video' src='' frameborder='0' allowfullscreen='true' style='overflow-x:hidden;overflow:auto;width:100%;height:322px;'></iframe>" +
+                "<iframe id='video' src='' frameborder='0' allowfullscreen='true' style='overflow-x:hidden;overflow:auto;width:100%;height:487px;'></iframe>" +
             "</div>" +
+        "</div>").appendTo("#bot");
+
+    //제스처 케릭터 영역 생성
+    $("#bot > div").add(
+        "<div class='gesture-wrapper gestureArea'>" +
+            "<div class='gestureHeader'>" +
+                "<span id='gestureTitle' class='gestureTitle'></span>" +
+                "<button class='btnTopClose'></button>" +
+            "</div>" +
+            //"<div class='gestureBody'>" +
+                //"<iframe id='gesture' src='https://timesolutiongesture.azurewebsites.net' frameborder='0' allowfullscreen='true' style='overflow-x:hidden;overflow:auto;width:100%;height:322px;'></iframe>" +
+            //"</div>" +
+            "<div class='animationDiv' style='width:570px;height:350px;background:#000'>" +
+
+            "</div>" +
+            "<button onclick='playAnimation(0);' style='width:150px;height:150px'>ChatBot_AinTest02</button>" +
         "</div>").appendTo("#bot");
 
     //챗봇창 상단 생성
@@ -22,7 +38,8 @@ $(function () {
         "<span class='chatTitleText'><strong>TS</strong> ChatBot</span>" +
         "<span class='topIcon btnClose'><button class='topIcon03'></button></span>" +
         "<span class='topIcon btnLayer btnLayerFull'><button class='topIcon02'></button></span>" +
-        "<span class='topIcon btnMin'><button class='topIcon01'></button></span>").appendTo(".wc-header");
+        "<span class='topIcon btnMin'><button class='topIcon01'></button></span>" +
+        "<span class='topGestureArea'><button class='topGestureIcon'>C</button></span>").appendTo(".wc-header");
 
     //챗봇 메뉴창 생성
     $(".wc-chatview-panel > div").add(
@@ -82,22 +99,30 @@ $(function () {
         $('#video').attr('src', movPopUrl);
         $('.mov-wrapper').show().animate({ "right": "380px", "opacity": "1", "display": "block" }, "fast").fadeIn("fast");
     });
+    //챗봇 제스처 동작
+    $('.topGestureIcon').click(function () {
+        $('.gesture-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "slow").fadeIn("slow");
+    });
+    //닫기 버튼
     $('.btnTopClose').click(function () {
         $("#video").attr('src', '');
         $('.mov-wrapper').hide().animate({ "right": "-380px", "opacity": "0", "display": "none" }, "slow").fadeOut("slow");
+        $('.gesture-wrapper').hide().animate({ "right": "-380px", "opacity": "0"}, "slow").fadeOut("slow");
     });
+
+    
 });
 
 //챗봇 메뉴 처음으로 돌아가기
-function viewMenu() {
-    var returnText = "return home";     // 처음으로 돌아가는 텍스트
-    $('div.wc-console').addClass('has-text');
-    $('input[type="text"].wc-shellinput').attr('value', returnText);
-    $('input[type="text"].wc-shellinput').val(returnText);
-    $('label.wc-send').trigger('click');
-    $('input[type="text"].wc-shellinput').attr('value', '');
-    $('input[type="text"].wc-shellinput').val('');
-    $('.wc-console').removeClass('has-text');
-    $('.menuBox').removeClass('on').addClass('off');
-    $('.menuBox').css({ 'display': 'none' });
-}
+//function viewMenu() {
+//    var returnText = "return home";     // 처음으로 돌아가는 텍스트
+//    $('div.wc-console').addClass('has-text');
+//    $('input[type="text"].wc-shellinput').attr('value', returnText);
+//    $('input[type="text"].wc-shellinput').val(returnText);
+//    $('label.wc-send').trigger('click');
+//    $('input[type="text"].wc-shellinput').attr('value', '');
+//    $('input[type="text"].wc-shellinput').val('');
+//    $('.wc-console').removeClass('has-text');
+//    $('.menuBox').removeClass('on').addClass('off');
+//    $('.menuBox').css({ 'display': 'none' });
+//}
