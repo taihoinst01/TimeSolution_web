@@ -23,13 +23,13 @@ $(function () {
                 "<span id='gestureTitle' class='gestureTitle'></span>" +
                 "<button class='btnTopClose'></button>" +
             "</div>" +
-            //"<div class='gestureBody'>" +
-                //"<iframe id='gesture' src='https://timesolutiongesture.azurewebsites.net' frameborder='0' allowfullscreen='true' style='overflow-x:hidden;overflow:auto;width:100%;height:322px;'></iframe>" +
-            //"</div>" +
-            "<div class='animationDiv' style='width:570px;height:350px;background:#000'>" +
-
+            "<div class='gestureBody'>" +
+                "<iframe id='gesture' src='https://timesolutiongesture.azurewebsites.net' frameborder='0' allowfullscreen='true' style='overflow-x:hidden;overflow:auto;width:100%;height:322px;'></iframe>" +
             "</div>" +
-            "<button onclick='playAnimation(0);' style='width:150px;height:150px'>ChatBot_AinTest02</button>" +
+            //"<div class='animationDiv' style='width:570px;height:350px;background:#000'>" +
+
+            //"</div>" +
+            //"<button onclick='playAnimation(0);' style='width:150px;height:150px'>ChatBot_AinTest02</button>" +
         "</div>").appendTo("#bot");
 
     //챗봇창 상단 생성
