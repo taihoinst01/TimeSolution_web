@@ -6,7 +6,7 @@ var actionList = [];
 var clock;
 var mixer;
 function playAction(actionNum) {
-
+    console.log("actionNum ::: " + actionNum);
     //동작을 맨처음 클릭시에는 action에 애니메이션이 없는 상태이기 때문에 분기처리를 안하고 action.stop()을 하면 에러 발생
     if (action != null) {
         action.stop();
@@ -93,7 +93,7 @@ function playAction(actionNum) {
 }
 
 function playAnimation(fbxName) {
-
+    console.log("fbxName ::: " + fbxName);
     if (!Detector.webgl) Detector.addGetWebGLMessage();
     clock = new THREE.Clock();
 
@@ -127,7 +127,7 @@ function playAnimation(fbxName) {
 
         // model
         var loader = new THREE.FBXLoader();
-        loader.load('fbx/ChatBot_AniAll01.fbx', function (object) {
+        loader.load('assets/fbx/ChatBot_AniAll01.FBX', function (object) {
 
             //AnimationMixer는 장면의 특정 객체에 대한 애니메이션 플레이어입니다.
             object.mixer = new THREE.AnimationMixer(object);

@@ -29,7 +29,7 @@ $(function () {
             "<div class='animationDiv' style='width:570px;height:350px;background:#000'>" +
 
             "</div>" +
-            "<button onclick='playAnimation(0);' style='width:150px;height:150px'>ChatBot_AinTest02</button>" +
+            "<button class='testBtn' style='width:150px;height:150px'>ChatBot_AinTest02</button>" +
         "</div>").appendTo("#bot");
 
     //챗봇창 상단 생성
@@ -110,7 +110,12 @@ $(function () {
         $('.gesture-wrapper').hide().animate({ "right": "-380px", "opacity": "0"}, "slow").fadeOut("slow");
     });
 
-    
+
+    //제스처 테스트
+    $('.testBtn').click(function () {
+        //playAnimation('ChatBot_AinTest02');
+        playAnimation('ChatBot_AniAll01');
+    });
 });
 
 //챗봇 메뉴 처음으로 돌아가기
