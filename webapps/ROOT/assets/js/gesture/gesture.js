@@ -195,7 +195,8 @@ function playAnimation(fbxName) {
         //장치 픽셀 비율을 설정합니다.
         renderer.setPixelRatio(window.devicePixelRatio);
         //출력 캔버스를 장치 픽셀 비율을 고려하여 (너비, 높이)로 조정하고 (0, 0)부터 시작하여 뷰포트를 해당 크기에 맞게 설정합니다.
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        //renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setSize('570px', '383px');
 
         container.append(renderer.domElement);
         window.addEventListener('resize', onWindowResize, false);
