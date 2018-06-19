@@ -3145,8 +3145,7 @@
                              , o.createElement("div", { className: "hidden", alt: e.content.title })
                              , o.createElement("div", { className: "hidden", alt: e.content.card_value }))
                         } else {
-                            console.log("제스너 no : " + e.content.gesture);
-                            playAction(e.content.gesture);
+                            console.log("제스너 no : "+e.content.gesture);
                             if (!e.content) return null;
                             var r = new i.AdaptiveCardBuilder;
                             return e.content.images && e.content.images.forEach(function (t) {

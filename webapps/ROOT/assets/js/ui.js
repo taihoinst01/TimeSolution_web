@@ -3,6 +3,7 @@ $(function () {
     $(window).resize(function () {
         //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     });
+    playAnimation('ChatBot_AinTest02'); //케릭터 실행
     
     //팝업창 생성
     $("#bot > div").add(
