@@ -26,7 +26,7 @@ $(function () {
             //"<div class='gestureBody'>" +
                 //"<iframe id='gesture' src='https://timesolutiongesture.azurewebsites.net' frameborder='0' allowfullscreen='true' style='overflow-x:hidden;overflow:auto;width:100%;height:322px;'></iframe>" +
             //"</div>" +
-            "<div id='animationDiv' style='width:570px;height:350px;background:#000'>" +
+            "<div id='animationDiv' style='width:570px;height:490px;background:#000'>" +
                 "<button class='testBtn'>ChatBot_AinTest02</button>" +
                 "<br>" +
                 "<button onclick='playAction(0);'>동작0</button>" +
