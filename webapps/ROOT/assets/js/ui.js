@@ -3,7 +3,6 @@ $(function () {
     $(window).resize(function () {
         //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     });
-    playAnimation('ChatBot_AinTest02'); //케릭터 실행
     
     //팝업창 생성
     $("#bot > div").add(
@@ -123,7 +122,12 @@ $(function () {
         $('.mov-wrapper').show().animate({ "right": "380px", "opacity": "1", "display": "block" }, "fast").fadeIn("fast");
     });
     //챗봇 제스처 동작
+    var startJesture = 0;
     $('.topGestureIcon').click(function () {
+        if (startJesture == 0) {
+            playAnimation('ChatBot_AniAll01');
+            startJesture = 1;
+        }
         $('.gesture-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "slow").fadeIn("slow");
     });
     //닫기 버튼
@@ -135,10 +139,10 @@ $(function () {
 
 
     //제스처 테스트
-    $('.testBtn').click(function () {
-        playAnimation('ChatBot_AinTest02');
-        //playAnimation('ChatBot_AniAll01');
-    });
+    //$('.topGestureArea').click(function () {
+    //    //playAnimation('ChatBot_AinTest02');
+    //    playAnimation('ChatBot_AniAll01');
+    //});
 });
 
 //챗봇 메뉴 처음으로 돌아가기
