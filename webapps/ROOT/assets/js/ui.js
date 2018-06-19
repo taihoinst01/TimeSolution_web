@@ -26,7 +26,7 @@ $(function () {
             //"<div class='gestureBody'>" +
                 //"<iframe id='gesture' src='https://timesolutiongesture.azurewebsites.net' frameborder='0' allowfullscreen='true' style='overflow-x:hidden;overflow:auto;width:100%;height:322px;'></iframe>" +
             //"</div>" +
-            "<div style='width:570px;height:489px;background:#000'>" +
+            "<div id='animationDiv' style='width:570px;height:489px;background:#000'>" +
                 "<button class='testBtn'>ChatBot_AinTest02</button>" +
                 "<br>" +
                 "<button onclick='playAction(0);'>동작0</button>" +
@@ -49,10 +49,12 @@ $(function () {
                 "<button onclick='playAction(17);'>동작17</button>" +
                 "<button onclick='playAction(18);'>동작18</button>" +
                 "<button onclick='playAction(19);'>동작19</button>" +
-            "</div>" +
-            "<div id='animationDiv'>" +
 
+                //"<div id='animationDiv'>" +
+
+                //"</div>" +
             "</div>" +
+            
             
             
         "</div>").appendTo("#bot");
