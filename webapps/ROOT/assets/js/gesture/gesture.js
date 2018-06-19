@@ -200,7 +200,7 @@ function playAnimation(fbxName) {
         //renderer.setSize(window.innerWidth, window.innerHeight);
         //console.log("window.innerWidth :: " + window.innerWidth);
         //console.log("window.innerHeight :: " + window.innerHeight);
-        renderer.setSize(570, 383);
+        renderer.setSize('570', '383');
 
         container.append(renderer.domElement);
         window.addEventListener('resize', onWindowResize, false);
