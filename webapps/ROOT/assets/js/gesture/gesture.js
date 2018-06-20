@@ -113,9 +113,9 @@ function playAnimation(fbxName) {
         camera.position.set(100, 3000, 7500);
 
         //궤도 제어는 카메라가 표적 주위를 도는 것을 허용합니다. 
-        controls = new THREE.OrbitControls(camera);
-        controls.target.set(0, 2000, 0);
-        controls.update();
+        //controls = new THREE.OrbitControls(camera);
+        //controls.target.set(0, 2000, 0);
+        //controls.update();
 
         //장면을 사용하면 three.js에서 렌더링 할 내용의 위치를 ​​설정할 수 있습니다. 이것은 물건, 조명 및 카메라를 배치하는 곳입니다.
         scene = new THREE.Scene();
