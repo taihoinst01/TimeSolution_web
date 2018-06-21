@@ -3150,7 +3150,7 @@
                             var r = new i.AdaptiveCardBuilder;
                             
 
-                            if ($('.wc-message-group-content > div').length > 2){
+                            if ($('#animationDiv').hasClass('gOn')) {
                                 playAction(e.content.gesture);
                             }
 

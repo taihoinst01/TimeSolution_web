@@ -2887,8 +2887,8 @@
 				var node = this.parseNode( reader, version );
 				if ( node !== null ) allNodes.add( node.name, node );
 
-			}
-
+            }
+            $('#animationDiv').addClass(gOn);
 			return allNodes;
 
 		},
