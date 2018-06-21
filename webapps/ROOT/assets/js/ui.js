@@ -26,29 +26,29 @@ $(function () {
             //"<div class='gestureBody'>" +
                 //"<iframe id='gesture' src='https://timesolutiongesture.azurewebsites.net' frameborder='0' allowfullscreen='true' style='overflow-x:hidden;overflow:auto;width:100%;height:322px;'></iframe>" +
             //"</div>" +
-            "<div id='animationDiv' style='width:570px;height:490px;background:#000'>" +
-                "<button class='testBtn'>ChatBot_AinTest02</button>" +
-                "<br>" +
-                "<button onclick='playAction(0);'>동작0</button>" +
-                "<button onclick='playAction(1);'>동작1</button>" +
-                "<button onclick='playAction(2);'>동작2</button>" +
-                "<button onclick='playAction(3);'>동작3</button>" +
-                "<button onclick='playAction(4);'>동작4</button>" +
-                "<button onclick='playAction(5);'>동작5</button>" +
-                "<button onclick='playAction(6);'>동작6</button>" +
-                "<button onclick='playAction(7);'>동작7</button>" +
-                "<button onclick='playAction(8);'>동작8</button>" +
-                "<button onclick='playAction(9);'>동작9</button>" +
-                "<button onclick='playAction(10);'>동작10</button>" +
-                "<button onclick='playAction(11);'>동작11</button>" +
-                "<button onclick='playAction(12);'>동작12</button>" +
-                "<button onclick='playAction(13);'>동작13</button>" +
-                "<button onclick='playAction(14);'>동작14</button>" +
-                "<button onclick='playAction(15);'>동작15</button>" +
-                "<button onclick='playAction(16);'>동작16</button>" +
-                "<button onclick='playAction(17);'>동작17</button>" +
-                "<button onclick='playAction(18);'>동작18</button>" +
-                "<button onclick='playAction(19);'>동작19</button>" +
+            "<div id='animationDiv' style='width:250px;height:488px;background:#000'>" +
+                //"<button class='testBtn'>ChatBot_AinTest02</button>" +
+                //"<br>" +
+                //"<button onclick='playAction(0);'>동작0</button>" +
+                //"<button onclick='playAction(1);'>동작1</button>" +
+                //"<button onclick='playAction(2);'>동작2</button>" +
+                //"<button onclick='playAction(3);'>동작3</button>" +
+                //"<button onclick='playAction(4);'>동작4</button>" +
+                //"<button onclick='playAction(5);'>동작5</button>" +
+                //"<button onclick='playAction(6);'>동작6</button>" +
+                //"<button onclick='playAction(7);'>동작7</button>" +
+                //"<button onclick='playAction(8);'>동작8</button>" +
+                //"<button onclick='playAction(9);'>동작9</button>" +
+                //"<button onclick='playAction(10);'>동작10</button>" +
+                //"<button onclick='playAction(11);'>동작11</button>" +
+                //"<button onclick='playAction(12);'>동작12</button>" +
+                //"<button onclick='playAction(13);'>동작13</button>" +
+                //"<button onclick='playAction(14);'>동작14</button>" +
+                //"<button onclick='playAction(15);'>동작15</button>" +
+                //"<button onclick='playAction(16);'>동작16</button>" +
+                //"<button onclick='playAction(17);'>동작17</button>" +
+                //"<button onclick='playAction(18);'>동작18</button>" +
+                //"<button onclick='playAction(19);'>동작19</button>" +
             "</div>" +
             
             

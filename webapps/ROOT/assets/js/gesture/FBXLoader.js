@@ -2888,7 +2888,7 @@
 				if ( node !== null ) allNodes.add( node.name, node );
 
             }
-            $('#animationDiv').addClass('gOn');
+            $('#animationDiv').addClass('gOn'); //2018.06.21 KSO 제스처 로딩완료 클래스 추가(botchat.js 에서 사용)
 			return allNodes;
 
 		},
