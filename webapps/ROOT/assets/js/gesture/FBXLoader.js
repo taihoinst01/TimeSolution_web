@@ -2888,7 +2888,7 @@
 				if ( node !== null ) allNodes.add( node.name, node );
 
             }
-            $('#animationDiv').addClass(gOn);
+            $('#animationDiv').addClass('gOn');
 			return allNodes;
 
 		},
