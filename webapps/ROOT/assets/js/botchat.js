@@ -3152,7 +3152,11 @@
                             // KSO 2018.06.21 gesture loading 여부 확인 후 해당 gesture 번호 실행, gesture 로딩 이후에 실행 됨
                             // gesture num( 0 ~ 19 ) 까지 있음
                             if ($('#animationDiv').hasClass('gOn')) {
-                                playAction(e.content.gesture);
+                                var gestureNum = e.content.gesture;
+                                if (gestureNum.equals('undefined')) {
+                                    gestureNum = 3;
+                                }
+                                playAction(gestureNum);
                             }
 
                             return e.content.images && e.content.images.forEach(function (t) {
