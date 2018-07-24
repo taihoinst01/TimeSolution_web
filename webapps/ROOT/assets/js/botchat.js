@@ -3153,10 +3153,10 @@
                             // gesture num( 0 ~ 19 ) 까지 있음
                             if ($('#animationDiv').hasClass('gOn')) {
                                 var gestureNum = e.content.gesture;
-                                if (gestureNum.equals('undefined')) {
-                                    gestureNum = 3;
+                                if (gestureNum.equals(undefined)) {
+                                    e.content.gesture = 3;
                                 }
-                                playAction(gestureNum);
+                                playAction(e.content.gesture);
                             }
 
                             return e.content.images && e.content.images.forEach(function (t) {
