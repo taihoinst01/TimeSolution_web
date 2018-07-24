@@ -208,7 +208,7 @@ function playAnimation(fbxName) {
         renderer.setSize(249, 487);     //챗팅창에 고려한 canvas 사이즈 임의 조정
 
         container.append(renderer.domElement);
-        window.addEventListener('resize', onWindowResize, false);
+        //window.addEventListener('resize', onWindowResize, false); //resize 안되게 주석
 
         // stats
         stats = new Stats();
